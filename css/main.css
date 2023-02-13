@@ -942,7 +942,7 @@ h6 {
         margin-bottom: 55px;
     }
     .whatis__item {
-        margin-top: 0;
+        margin: 0 auto;
     }
     .whatis__content {
         overflow: hidden;
@@ -1008,6 +1008,9 @@ h6 {
     }
     .form {
         padding: 20px 0 42px;
+    }
+    .form__wrap {
+        width: 320px;
     }
     .form__title {
         font-size: 18px;
