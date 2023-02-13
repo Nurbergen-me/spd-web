@@ -252,6 +252,23 @@ h6 {
     margin-bottom: 20px;
 }
 
+.whatis__content {
+    position: relative;
+}
+
+.whatis__content:before {
+    content: '';
+    position: absolute;
+    top: -230px;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+    background: linear-gradient(180deg, #141119 0%, rgba(20, 17, 25, 0) 45.57%);
+    width: 850px;
+    height: 850px;
+    border-radius: 50%;
+    z-index: -1;
+}
+
 .whatis__items {
     display: flex;
     align-items: flex-start;
@@ -341,6 +358,7 @@ h6 {
 
 .seo__text {
     max-width: 750px;
+    color: #C5BEE3;
 }
 
 .seo__name {
@@ -370,17 +388,26 @@ h6 {
     display: flex;
     align-items: flex-start;
     gap: 20px;
+    overflow-x: scroll;
+    cursor: grab;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.cases__items::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari and Opera */
 }
 
 .cases__item {
     width: 24%;
+    min-width: 285px;
     margin-top: 34px;
     margin-bottom: 60px;
 }
 
 .cases__img {
     width: 100%;
-    height: 264px;
+    height: 287px;
     object-fit: cover;
     margin-bottom: 15px;
 }
@@ -438,10 +465,12 @@ h6 {
     align-items: center;
     justify-content: center;
     gap: 50px;
+    overflow: hidden;
 }
 
 .reviews__item {
     width: 234px;
+    min-width: 234px;
     height: 377px;
     opacity: 0.2;
     position: relative;
@@ -449,7 +478,7 @@ h6 {
 
 .reviews__item:after {
     content: '';
-    background: url("/img/play-icon.svg") no-repeat center / contain;
+    background: url("../img/play-icon.svg") no-repeat center / contain;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -461,6 +490,7 @@ h6 {
 
 .reviews__item.active {
     width: 306px;
+    min-width: 306px;
     height: 493px;
     opacity: 0.7;
 }
@@ -495,7 +525,7 @@ h6 {
 }
 
 .format__item {
-    background: #7521FF;
+    background: #946EFF;
     width: calc(25% - 15px);
     height: 150px;
     padding: 15px 13px;
@@ -532,7 +562,7 @@ h6 {
 }
 
 .next__btn {
-    background: #7521FF;
+    background: #946EFF;
     height: 66px;
     font-weight: 600;
     width: 100%;
@@ -554,19 +584,38 @@ h6 {
     margin-bottom: 60px;
 }
 
+.qa__icon {
+    transition: 0.5s ease;
+}
+
 .qa__item {
     max-width: 804px;
-    background: #141119;
     margin: 0 auto 10px;
+    max-height: 70px;
+    transition: 0.5s ease;
+    overflow: hidden;
+}
+
+.qa__item.active {
+    max-height: 300px;
+}
+
+.qa__item.active .qa__icon {
+    transform: rotate(180deg);
 }
 
 .qa__header {
+    background: #141119;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 70px;
     padding: 0 29px;
     cursor: pointer;
+}
+
+.qa__body {
+    padding: 20px 30px;
 }
 
 
@@ -592,7 +641,7 @@ h6 {
 /* !================ Form ================! */
 
 .form {
-    background: #7521FF;
+    background: #946EFF;
     padding: 90px 0 132px;
 }
 
@@ -606,6 +655,7 @@ h6 {
 
 .form__wrap {
     width: 392px;
+    max-width: 100%;
     margin: auto;
 }
 
@@ -616,6 +666,7 @@ h6 {
     margin-bottom: 10px;
     width: 100%;
     border: none;
+    outline: none;
 }
 
 .form__input::placeholder {
@@ -729,6 +780,9 @@ h6 {
     .container {
         max-width: 1140px;
     }
+    .seo__text {
+        max-width: 680px;
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -751,11 +805,64 @@ h6 {
         max-width: 234px;
         margin-top: -37px;
     }
+    .whatis {
+        padding-top: 167px;
+        padding-bottom: 90px;
+    }
     .numbers__number {
         font-size: 18px;
     }
     .numbers__text {
         font-size: 12px;
+    }
+    .whatis__content:before {
+        width: 766px;
+        height: 766px;
+        top: -150px;
+    }
+    .who {
+        padding-bottom: 148px;
+    }
+    .who__item {
+        max-width: 230px;
+        margin: 0 auto;
+    }
+    .seo__text {
+        max-width: 480px;
+        color: #96939B;
+    }
+    .cases {
+        padding: 150px 0 30px;
+    }
+    .reviews, .next, .qa {
+        padding-bottom: 0;
+    }
+    .format {
+        padding-bottom: 30px;
+    }
+    .format__item, .format__empty {
+        width: calc(50% - 10px);
+    }
+    .format__item:last-child {
+        margin-left: 0;
+    }
+    .qa {
+        padding-top: 150px;
+    }
+    .quote {
+        padding-bottom: 100px;
+    }
+    .quote__text {
+        font-size: 36px;
+        max-width: 90%;
+        margin: 0 auto 30px;
+    }
+    .form {
+        padding: 70px 0 130px
+    }
+    .form__title {
+        font-size: 36px;
+        margin-bottom: 26px;
     }
 }
 
@@ -765,6 +872,12 @@ h6 {
     }
     h1, h2 {
         font-size: 28px;
+    }
+    h5 {
+        font-size: 18px;
+    }
+    h6 {
+        font-size: 14px;
     }
     .navbar {
         padding: 8px 0;
@@ -816,6 +929,108 @@ h6 {
         text-align: center;
         margin: auto;
         gap: 10px;
+    }
+    .whatis {
+        padding-top: 70px;
+        padding-bottom: 50px;
+    }
+    .whatis__items {
+        flex-direction: column;
+        gap: 80px;
+    }
+    .whatis__title {
+        margin-bottom: 55px;
+    }
+    .whatis__item {
+        margin-top: 0;
+    }
+    .whatis__content {
+        overflow: hidden;
+    }
+    .whatis__content::before {
+        top: 230px;
+    }
+    .who {
+        padding-top: 100px;
+        padding-bottom: 82px;
+    }
+    .who__title {
+        margin-bottom: 60px;
+    }
+    .who__items {
+        flex-direction: column;
+        gap: 60px;
+    }
+    .seo {
+        padding: 30px 0;
+    }
+    .seo__content {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    .seo__wrap {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .seo__name {
+        font-size: 16px;
+    }
+    .reviews__items {
+        gap: 20px;
+    }
+    .reviews__item {
+        min-width: 174px;
+        height: 280px;
+    }
+    .reviews__item.active {
+        min-width: 230px;
+        height: 370px;
+    }
+    .format__item {
+        width: 100%;
+        height: 64px;
+    }
+    .qa__header {
+        height: 64px;
+        font-size: 12px;
+        padding: 15px;
+    }
+    .qa__body {
+        padding: 15px;
+        font-size: 12px;
+    }
+    .quote {
+        padding: 93px 0 48px;
+    }
+    .quote__text {
+        font-size: 16px;
+        margin-bottom: 23px;
+    }
+    .form {
+        padding: 20px 0 42px;
+    }
+    .form__title {
+        font-size: 18px;
+    }
+    .form__input {
+        height: 56px;
+        padding-left: 20px;
+    }
+    .form__submit {
+        font-size: 10px;
+    }
+    .footer {
+        padding: 54px 0 64px;
+    }
+    .footer__menu {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .footer__logo {
+        margin-bottom: 36px;
+    }
+    .footer__link {
+        margin-top: 0;
     }
 }
 
