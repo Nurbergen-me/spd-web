@@ -72,6 +72,74 @@ h6 {
     margin: 0 auto;
 }
 
+.hidden {
+    background: #946EFF;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: -100%;
+    opacity: 0;
+    z-index: 200;
+    transition: 0.5s ease;
+    text-align: center;
+    padding-top: 30%;
+}
+
+.hidden.active {
+    right: 0;
+    opacity: 1;
+}
+
+.hidden__close {
+    cursor: pointer;
+    width: 35px;
+    height: 32px;
+    position: absolute;
+    top: 30px;
+    right: 22px;
+}
+
+.hidden__close-item {
+    background: #fff;
+    position: absolute;
+    transform: rotate(-45deg);
+    height: 2px;
+    width: 100%;
+}
+
+.hidden__close-item:last-child {
+    transform: rotate(45deg);
+}
+
+.hidden__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.hidden__link {
+    font-family: 'Unbounded', cursive;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+.hidden__btn {
+    width: 280px;
+    margin: 0 auto;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+    font-weight: 600;
+    font-size: 12px;
+    font-family: 'Roboto Flex', sans-serif;
+    text-transform: initial;
+    margin-top: 30%;
+}
+
 
 
 /* !================ Navbar ================! */
@@ -132,7 +200,7 @@ h6 {
 
 .navbar__burger {
     background: #141119;
-    width: 38px;
+    width: 32px;
     height: 28px;
     border-radius: 3px;
     padding: 0 8px;
@@ -142,6 +210,7 @@ h6 {
     flex-direction: column;
     gap: 3px;
     margin-left: 5px;
+    cursor: pointer;
     display: none;
 }
 
@@ -643,6 +712,7 @@ h6 {
 .form {
     background: #946EFF;
     padding: 90px 0 132px;
+    scroll-margin-top: 60px;
 }
 
 .form__title {
