@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600&family=Unbounded:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <title>SPD</title>
+</head>
+<body>
+    <div class="hidden">
+        <div class="hidden__close">
+           <div class="hidden__close-item"></div>
+           <div class="hidden__close-item"></div>
+        </div>
+        <ul class="hidden__menu">
+           <li>
+               <a href="cases.html" class="hidden__link">
+                   кейсы
+               </a>
+           </li>
+           <li>
+               <a href="roadmap.html" class="hidden__link">
+                   карта развития
+               </a>
+           </li>
+           <li>
+               <a href="index.html#reviews" class="hidden__link">
+                   отзывы
+               </a>
+           </li>
+           <li>
+               <a href="team.html" class="hidden__link">
+                   команда
+               </a>
+           </li>
+           <li>
+               <a href="index.html#qa" class="hidden__link">
+                   F.A.Q.
+               </a>
+           </li>
+        </ul>
+        <a href="index.html#form" class="hidden__link hidden__btn">
+           Запись на отбор
+        </a>
+   </div>
+   <div class="navbar">
+       <div class="container">
+           <div class="navbar__content">
+               <a href="index.html#header">
+                   <img src="img/logo.svg" alt="SPD" class="navbar__logo">
+               </a>
+               <ul class="navbar__menu">
+                   <li>
+                       <a href="cases.html" class="navbar__link">
+                           Кейсы
+                       </a>
+                   </li>
+                   <li>
+                       <a href="roadmap.html" class="navbar__link">
+                           Карта развития
+                       </a>
+                   </li>
+                   <li>
+                       <a href="index.html#reviews" class="navbar__link">
+                           Отзывы
+                       </a>
+                   </li>
+                   <li>
+                       <a href="team.html" class="navbar__link">
+                           Команда
+                       </a>
+                   </li>
+                   <li>
+                       <a href="index.html#qa" class="navbar__link">
+                           F.A.Q.
+                       </a>
+                   </li>
+               </ul>
+               <button class="navbar__btn">
+                   Запись на отбор
+               </button>
+               <div class="navbar__burger">
+                   <div class="navbar__burger-item"></div>
+                   <div class="navbar__burger-item"></div>
+                   <div class="navbar__burger-item"></div>
+               </div>
+           </div>
+       </div>
+   </div>
+    <header class="header header__roadmap" id="header">
+        <div class="container">
+            <h1 class="header__title">
+                <span>
+                    карта
+                </span>
+                <span>
+                    развития
+                </span>
+            </h1>
+        </div>
+    </header>
+    <section class="roadmap" id="roadmap">
+        <div class="container">
+            <div class="roadmap__content">
+                <div class="roadmap__item">
+                    <div class="roadmap__logo">
+                        <img src="img/spd-energy.svg" alt="spd-energy">
+                    </div>
+                    <h5 class="roadmap__name">
+                        взлёт
+                    </h5>
+                    <p class="roadmap__text">
+                        Зарабатываем первые серьезные деньги на своей экспертизе
+                    </p>
+                </div>
+                <div class="roadmap__line"></div>
+                <div class="roadmap__item">
+                    <div class="roadmap__logo big">
+                        <img src="img/spd-x.svg" alt="spd-x">
+                    </div>
+                    <h5 class="roadmap__name">
+                        выход из атмосферы
+                    </h5>
+                    <p class="roadmap__text">
+                        Строим коммьюнити и партнерскую систему, чтобы масштабироваться и зарабатывать еще больше и легче
+                    </p>
+                </div>
+                <div class="roadmap__line"></div>
+                <div class="roadmap__item">
+                    <div class="roadmap__logo small">
+                        <img src="img/spd-infinity.svg" alt="spd-infinity">
+                    </div>
+                    <h5 class="roadmap__name">
+                        Открытый космос
+                    </h5>
+                    <p class="roadmap__text">
+                        Выходим в состояние где деньги приходят к нам сами
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="form" id="form">
+        <div class="container">
+            <h3 class="form__title">
+                оставить заявку на отбор
+            </h3>
+            <form action="" class="form__wrap">
+                <input type="text" class="form__input" placeholder="Имя">
+                <input type="tel" onkeyup="this.value=this.value.replace(/^(\d{1})(\d{3})(\d{3})(\d{2})(\d{2})/,'+7 ($2) $3 $4 $5')" class="form__input" placeholder="+7 999 999 99 99">
+                <input type="text" class="form__input" placeholder="Ссылка на Telegram">
+                <input type="text" class="form__input" placeholder="E-mail">
+                <button class="form__btn">
+                    Отправить
+                </button>
+                <div class="form__submit">
+                    <input type="checkbox" class="form__check">
+                    я согласен с политикой конфиденциальности
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__content">
+                <a href="index.html#header">
+                    <img src="img/logo.svg" alt="logo" class="footer__logo">
+                </a>
+                <ul class="footer__menu">
+                    <li>
+                        <a href="cases.html" class="footer__link">
+                            кейсы
+                        </a>
+                    </li>
+                    <li>
+                        <a href="roadmap.html" class="footer__link">
+                            карта развития
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">
+                            все продукты
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html#reviews" class="footer__link">
+                            отзывы
+                        </a>
+                    </li>
+                    <li>
+                        <a href="team.html" class="footer__link">
+                            команда
+                        </a>
+                    </li>
+                </ul>
+                <div class="footer__credits">
+                    <a href="#" class="footer__credits-link">
+                        Политика конфиденциальности
+                    </a>
+                    <a href="#" class="footer__credits-link">
+                        Договор оферты
+                    </a>
+                    <div class="footer__credits-text">
+                        2023. SPD. Все права защищены
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600&family=Unbounded:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <title>SPD</title>
+</head>
+<body>
+    <div class="hidden">
+        <div class="hidden__close">
+           <div class="hidden__close-item"></div>
+           <div class="hidden__close-item"></div>
+        </div>
+        <ul class="hidden__menu">
+           <li>
+               <a href="cases.html" class="hidden__link">
+                   кейсы
+               </a>
+           </li>
+           <li>
+               <a href="roadmap.html" class="hidden__link">
+                   карта развития
+               </a>
+           </li>
+           <li>
+               <a href="index.html#reviews" class="hidden__link">
+                   отзывы
+               </a>
+           </li>
+           <li>
+               <a href="team.html" class="hidden__link">
+                   команда
+               </a>
+           </li>
+           <li>
+               <a href="index.html#qa" class="hidden__link">
+                   F.A.Q.
+               </a>
+           </li>
+        </ul>
+        <a href="index.html#form" class="hidden__link hidden__btn">
+           Запись на отбор
+        </a>
+   </div>
+   <div class="navbar">
+       <div class="container">
+           <div class="navbar__content">
+               <a href="index.html#header">
+                   <img src="img/logo.svg" alt="SPD" class="navbar__logo">
+               </a>
+               <ul class="navbar__menu">
+                   <li>
+                       <a href="cases.html" class="navbar__link">
+                           Кейсы
+                       </a>
+                   </li>
+                   <li>
+                       <a href="roadmap.html" class="navbar__link">
+                           Карта развития
+                       </a>
+                   </li>
+                   <li>
+                       <a href="index.html#reviews" class="navbar__link">
+                           Отзывы
+                       </a>
+                   </li>
+                   <li>
+                       <a href="team.html" class="navbar__link">
+                           Команда
+                       </a>
+                   </li>
+                   <li>
+                       <a href="index.html#qa" class="navbar__link">
+                           F.A.Q.
+                       </a>
+                   </li>
+               </ul>
+               <button class="navbar__btn">
+                   Запись на отбор
+               </button>
+               <div class="navbar__burger">
+                   <div class="navbar__burger-item"></div>
+                   <div class="navbar__burger-item"></div>
+                   <div class="navbar__burger-item"></div>
+               </div>
+           </div>
+       </div>
+   </div>
+    <section class="cases cases-page" id="cases">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="#" class="breadcrumb__link">
+                    Главная
+                </a>
+                <div class="breadcrumb__icon breadcrumb__category">
+                    <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.5 11.5L6.5 6.5L1.5 1.5" stroke="#4B4852" stroke-linecap="square" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <a href="#" class="breadcrumb__link active">
+                    Кейсы
+                </a>
+            </div>
+            <h2 class="cases__title">
+                Кейсы
+            </h2>
+            <div class="cases__filters">
+                <div class="cases__filter">
+                    <div class="cases__filter-name">
+                        Программа SPD
+                    </div>
+                    <select class="cases__select">
+                        <option value="" disabled selected>Выберите программу</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+                <div class="cases__filter">
+                    <div class="cases__filter-name">
+                        Ниша(сфера эксперта)
+                    </div>
+                    <select class="cases__select">
+                        <option value="" disabled selected>Выберите нишу</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+                <div class="cases__filter">
+                    <div class="cases__filter-name">
+                        Доход эксперта(мес)
+                    </div>
+                    <div class="range_container">
+                        <div class="sliders_control">
+                           <input id="fromSlider" type="range" value="10" min="0" max="100"/>
+                           <input id="toSlider" type="range" value="30" min="0" max="100"/>
+                        </div>
+                        <div class="form_control">
+                          <div class="form_control_container">
+                              <input class="form_control_container__time__input" type="number" id="fromInput" value="10" min="0" max="100"/>
+                            </div>
+                            <div class="form_control_container">
+                              <input class="form_control_container__time__input" type="number" id="toInput" value="30" min="0" max="100"/>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <select class="cases__select">
+                        <option value="" disabled selected>Выберите программу</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select> -->
+                </div>
+                <div class="cases__filter">
+                    <div class="cases__filter-name">
+                        Наставник
+                    </div>
+                    <select class="cases__select">
+                        <option value="" disabled selected>Выберите наставника</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="cases__items">
+                <div class="cases__item">
+                    <img src="img/person-1.png" alt="person" class="cases__img">
+                    <div class="cases__info">
+                        <div class="cases__name">
+                            Вика Акропович
+                        </div>
+                        <p class="cases__text">
+                            Эксперт по личному бренду
+                        </p>
+                        <div class="cases__points">
+                            <div class="cases__point">
+                                <div class="cases__point-title">
+                                    Точка А
+                                </div>
+                                <div class="cases__point-result">
+                                    200 к
+                                </div>
+                            </div>
+                            <div class="cases__point">
+                                <div class="cases__point-title">
+                                    Точка Б
+                                </div>
+                                <div class="cases__point-result">
+                                    1,2 млн
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cases__point">
+                            <div class="cases__point-title">
+                                Наставник
+                            </div>
+                            <div class="cases__point-result">
+                                Лиля Хорош
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cases__item">
+                    <img src="img/person-2.png" alt="person" class="cases__img">
+                    <div class="cases__info">
+                        <div class="cases__name">
+                            Елизавета Алексеева
+                        </div>
+                        <p class="cases__text">
+                            Эксперт в разработке информационных продуктов
+                        </p>
+                        <div class="cases__points">
+                            <div class="cases__point">
+                                <div class="cases__point-title">
+                                    Точка А
+                                </div>
+                                <div class="cases__point-result">
+                                    50 к
+                                </div>
+                            </div>
+                            <div class="cases__point">
+                                <div class="cases__point-title">
+                                    Точка Б
+                                </div>
+                                <div class="cases__point-result">
+                                    800 к
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cases__point">
+                            <div class="cases__point-title">
+                                Наставник
+                            </div>
+                            <div class="cases__point-result">
+                                Денис Нелин
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cases__item">
+                    <img src="img/person-3.png" alt="person" class="cases__img">
+                    <div class="cases__info">
+                        <div class="cases__name">
+                            Вероника Андросова
+                        </div>
+                        <p class="cases__text">
+                            Директор школы по выращиванию творцов фотограф, режиссер 
+                        </p>
+                        <div class="cases__points">
+                            <div class="cases__point">
+                                <div class="cases__point-title">
+                                    Точка А
+                                </div>
+                                <div class="cases__point-result">
+                                    200 к
+                                </div>
+                            </div>
+                            <div class="cases__point">
+                                <div class="cases__point-title">
+                                    Точка Б
+                                </div>
+                                <div class="cases__point-result">
+                                    1,2 млн
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cases__point">
+                            <div class="cases__point-title">
+                                Наставник
+                            </div>
+                            <div class="cases__point-result">
+                                Денис Нелин
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cases__item">
+                    <img src="img/person-4.png" alt="person" class="cases__img">
+                    <div class="cases__info">
+                        <div class="cases__name">
+                            Вениамин Молчановский
+                        </div>
+                        <p class="cases__text">
+                            Эксперт по отношениям
+                        </p>
+                        <div class="cases__points">
+                            <div class="cases__point">
+                                <div class="cases__point-title">
+                                    Точка А
+                                </div>
+                                <div class="cases__point-result">
+                                    200 к
+                                </div>
+                            </div>
+                            <div class="cases__point">
+                                <div class="cases__point-title">
+                                    Точка Б
+                                </div>
+                                <div class="cases__point-result">
+                                    1,2 млн
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cases__point">
+                            <div class="cases__point-title">
+                                Наставник
+                            </div>
+                            <div class="cases__point-result">
+                                Лиля Хорош
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cases__item">
+                    <img src="img/person-3.png" alt="person" class="cases__img">
+                    <div class="cases__info">
+                        <div class="cases__name">
+                            Вероника Андросова
+                        </div>
+                        <p class="cases__text">
+                            Директор школы по выращиванию творцов фотограф, режиссер 
+                        </p>
+                        <div class="cases__points">
+                            <div class="cases__point">
+                                <div class="cases__point-title">
+                                    Точка А
+                                </div>
+                                <div class="cases__point-result">
+                                    200 к
+                                </div>
+                            </div>
+                            <div class="cases__point">
+                                <div class="cases__point-title">
+                                    Точка Б
+                                </div>
+                                <div class="cases__point-result">
+                                    1,2 млн
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cases__point">
+                            <div class="cases__point-title">
+                                Наставник
+                            </div>
+                            <div class="cases__point-result">
+                                Денис Нелин
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cases__item">
+                    <img src="img/person-1.png" alt="person" class="cases__img">
+                    <div class="cases__info">
+                        <div class="cases__name">
+                            Вика Акропович
+                        </div>
+                        <p class="cases__text">
+                            Эксперт по личному бренду
+                        </p>
+                        <div class="cases__points">
+                            <div class="cases__point">
+                                <div class="cases__point-title">
+                                    Точка А
+                                </div>
+                                <div class="cases__point-result">
+                                    200 к
+                                </div>
+                            </div>
+                            <div class="cases__point">
+                                <div class="cases__point-title">
+                                    Точка Б
+                                </div>
+                                <div class="cases__point-result">
+                                    1,2 млн
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cases__point">
+                            <div class="cases__point-title">
+                                Наставник
+                            </div>
+                            <div class="cases__point-result">
+                                Лиля Хорош
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cases__item">
+                    <img src="img/person-4.png" alt="person" class="cases__img">
+                    <div class="cases__info">
+                        <div class="cases__name">
+                            Вениамин Молчановский
+                        </div>
+                        <p class="cases__text">
+                            Эксперт по отношениям
+                        </p>
+                        <div class="cases__points">
+                            <div class="cases__point">
+                                <div class="cases__point-title">
+                                    Точка А
+                                </div>
+                                <div class="cases__point-result">
+                                    200 к
+                                </div>
+                            </div>
+                            <div class="cases__point">
+                                <div class="cases__point-title">
+                                    Точка Б
+                                </div>
+                                <div class="cases__point-result">
+                                    1,2 млн
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cases__point">
+                            <div class="cases__point-title">
+                                Наставник
+                            </div>
+                            <div class="cases__point-result">
+                                Лиля Хорош
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cases__item">
+                    <img src="img/person-2.png" alt="person" class="cases__img">
+                    <div class="cases__info">
+                        <div class="cases__name">
+                            Елизавета Алексеева
+                        </div>
+                        <p class="cases__text">
+                            Эксперт в разработке информационных продуктов
+                        </p>
+                        <div class="cases__points">
+                            <div class="cases__point">
+                                <div class="cases__point-title">
+                                    Точка А
+                                </div>
+                                <div class="cases__point-result">
+                                    50 к
+                                </div>
+                            </div>
+                            <div class="cases__point">
+                                <div class="cases__point-title">
+                                    Точка Б
+                                </div>
+                                <div class="cases__point-result">
+                                    800 к
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cases__point">
+                            <div class="cases__point-title">
+                                Наставник
+                            </div>
+                            <div class="cases__point-result">
+                                Денис Нелин
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cases__btn">
+                Смотреть все
+            </div>
+        </div>
+    </section>
+    <section class="form" id="form">
+        <div class="container">
+            <h3 class="form__title">
+                оставить заявку на отбор
+            </h3>
+            <form action="" class="form__wrap">
+                <input type="text" class="form__input" placeholder="Имя">
+                <input type="tel" onkeyup="this.value=this.value.replace(/^(\d{1})(\d{3})(\d{3})(\d{2})(\d{2})/,'+7 ($2) $3 $4 $5')" class="form__input" placeholder="+7 999 999 99 99">
+                <input type="text" class="form__input" placeholder="Ссылка на Telegram">
+                <input type="text" class="form__input" placeholder="E-mail">
+                <button class="form__btn">
+                    Отправить
+                </button>
+                <div class="form__submit">
+                    <input type="checkbox" class="form__check">
+                    я согласен с политикой конфиденциальности
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__content">
+                <a href="index.html#header">
+                    <img src="img/logo.svg" alt="logo" class="footer__logo">
+                </a>
+                <ul class="footer__menu">
+                    <li>
+                        <a href="cases.html" class="footer__link">
+                            кейсы
+                        </a>
+                    </li>
+                    <li>
+                        <a href="roadmap.html" class="footer__link">
+                            карта развития
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">
+                            все продукты
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html#reviews" class="footer__link">
+                            отзывы
+                        </a>
+                    </li>
+                    <li>
+                        <a href="team.html" class="footer__link">
+                            команда
+                        </a>
+                    </li>
+                </ul>
+                <div class="footer__credits">
+                    <a href="#" class="footer__credits-link">
+                        Политика конфиденциальности
+                    </a>
+                    <a href="#" class="footer__credits-link">
+                        Договор оферты
+                    </a>
+                    <div class="footer__credits-text">
+                        2023. SPD. Все права защищены
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

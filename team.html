@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600&family=Unbounded:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <title>SPD</title>
+</head>
+<body>
+    <div class="hidden">
+        <div class="hidden__close">
+           <div class="hidden__close-item"></div>
+           <div class="hidden__close-item"></div>
+        </div>
+        <ul class="hidden__menu">
+           <li>
+               <a href="cases.html" class="hidden__link">
+                   кейсы
+               </a>
+           </li>
+           <li>
+               <a href="roadmap.html" class="hidden__link">
+                   карта развития
+               </a>
+           </li>
+           <li>
+               <a href="index.html#reviews" class="hidden__link">
+                   отзывы
+               </a>
+           </li>
+           <li>
+               <a href="team.html" class="hidden__link">
+                   команда
+               </a>
+           </li>
+           <li>
+               <a href="index.html#qa" class="hidden__link">
+                   F.A.Q.
+               </a>
+           </li>
+        </ul>
+        <a href="index.html#form" class="hidden__link hidden__btn">
+           Запись на отбор
+        </a>
+   </div>
+   <div class="navbar">
+       <div class="container">
+           <div class="navbar__content">
+               <a href="index.html#header">
+                   <img src="img/logo.svg" alt="SPD" class="navbar__logo">
+               </a>
+               <ul class="navbar__menu">
+                   <li>
+                       <a href="cases.html" class="navbar__link">
+                           Кейсы
+                       </a>
+                   </li>
+                   <li>
+                       <a href="roadmap.html" class="navbar__link">
+                           Карта развития
+                       </a>
+                   </li>
+                   <li>
+                       <a href="index.html#reviews" class="navbar__link">
+                           Отзывы
+                       </a>
+                   </li>
+                   <li>
+                       <a href="team.html" class="navbar__link">
+                           Команда
+                       </a>
+                   </li>
+                   <li>
+                       <a href="index.html#qa" class="navbar__link">
+                           F.A.Q.
+                       </a>
+                   </li>
+               </ul>
+               <button class="navbar__btn">
+                   Запись на отбор
+               </button>
+               <div class="navbar__burger">
+                   <div class="navbar__burger-item"></div>
+                   <div class="navbar__burger-item"></div>
+                   <div class="navbar__burger-item"></div>
+               </div>
+           </div>
+       </div>
+   </div>
+    <section class="team" id="team">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="#" class="breadcrumb__link">
+                    Главная
+                </a>
+                <div class="breadcrumb__icon">
+                    <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.5 11.5L6.5 6.5L1.5 1.5" stroke="#4B4852" stroke-linecap="square" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <a href="#" class="breadcrumb__link active">
+                    Команда
+                </a>
+            </div>
+            <h2 class="team__title">
+                команда
+            </h2>
+            <div class="team__content">
+                <a href="member.html" class="team__member">
+                    <img src="img/person-1.png" alt="person" class="team__img">
+                    <div class="team__name">
+                        Денис Нелин
+                    </div>
+                    <p class="team__text">
+                        Создатель SPD-технологии
+                    </p>
+                </a>
+                <a href="member.html" class="team__member">
+                    <img src="img/person-4.png" alt="person" class="team__img">
+                    <div class="team__name">
+                        Денис Нелин
+                    </div>
+                    <p class="team__text">
+                        Создатель SPD-технологии
+                    </p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="form" id="form">
+        <div class="container">
+            <h3 class="form__title">
+                оставить заявку на отбор
+            </h3>
+            <form action="" class="form__wrap">
+                <input type="text" class="form__input" placeholder="Имя">
+                <input type="tel" onkeyup="this.value=this.value.replace(/^(\d{1})(\d{3})(\d{3})(\d{2})(\d{2})/,'+7 ($2) $3 $4 $5')" class="form__input" placeholder="+7 999 999 99 99">
+                <input type="text" class="form__input" placeholder="Ссылка на Telegram">
+                <input type="text" class="form__input" placeholder="E-mail">
+                <button class="form__btn">
+                    Отправить
+                </button>
+                <div class="form__submit">
+                    <input type="checkbox" class="form__check">
+                    я согласен с политикой конфиденциальности
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__content">
+                <a href="index.html#header">
+                    <img src="img/logo.svg" alt="logo" class="footer__logo">
+                </a>
+                <ul class="footer__menu">
+                    <li>
+                        <a href="cases.html" class="footer__link">
+                            кейсы
+                        </a>
+                    </li>
+                    <li>
+                        <a href="roadmap.html" class="footer__link">
+                            карта развития
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">
+                            все продукты
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html#reviews" class="footer__link">
+                            отзывы
+                        </a>
+                    </li>
+                    <li>
+                        <a href="team.html" class="footer__link">
+                            команда
+                        </a>
+                    </li>
+                </ul>
+                <div class="footer__credits">
+                    <a href="#" class="footer__credits-link">
+                        Политика конфиденциальности
+                    </a>
+                    <a href="#" class="footer__credits-link">
+                        Договор оферты
+                    </a>
+                    <div class="footer__credits-text">
+                        2023. SPD. Все права защищены
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
