@@ -7,10 +7,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600&family=Unbounded:wght@300;400&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="css/main.css">
     <title>SPD</title>
 </head>
 <body>
+    <a href="#" class="to-top d-none">
+        <div class="to-top__icon">
+            <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 7L7 1L1 7" stroke="#946EFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg> 
+        </div>
+    </a>
     <div class="hidden">
          <div class="hidden__close">
             <div class="hidden__close-item"></div>
@@ -47,7 +58,7 @@
             Запись на отбор
          </a>
     </div>
-    <div class="navbar">
+    <div class="navbar" id="navbar">
         <div class="container">
             <div class="navbar__content">
                 <a href="index.html#header">
@@ -434,22 +445,36 @@
         <h2 class="reviews__title">
             отзывы
         </h2>
-        <div class="reviews__items">
-            <div class="reviews__item">
-                <img src="img/review-1.jpg" class="reviews__video" alt="review">
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+                <div class="reviews__item swiper-slide">
+                    <iframe class="reviews__video" src="https://www.youtube.com/embed/-kyWWTuPgcM" allowfullscreen>
+                    </iframe>
+                    <div class="reviews__play-btn"></div>
+                </div>
+                <div class="reviews__item swiper-slide">
+                    <img src="img/review-2.jpg" class="reviews__video" alt="review">
+                    <div class="reviews__play-btn"></div>
+                </div>
+                <div class="reviews__item swiper-slide">
+                    <img src="img/review-3.jpg" class="reviews__video" alt="review">
+                    <div class="reviews__play-btn"></div>
+                </div>
+                <div class="reviews__item swiper-slide">
+                    <img src="img/review-4.jpg" class="reviews__video" alt="review">
+                    <div class="reviews__play-btn"></div>
+                </div>
+                <div class="reviews__item swiper-slide">
+                    <img src="img/review-5.jpg" class="reviews__video" alt="review">
+                    <div class="reviews__play-btn"></div>
+                </div>
             </div>
-            <div class="reviews__item">
-                <img src="img/review-2.jpg" class="reviews__video" alt="review">
-            </div>
-            <div class="reviews__item active">
-                <img src="img/review-3.jpg" class="reviews__video" alt="review">
-            </div>
-            <div class="reviews__item">
-                <img src="img/review-4.jpg" class="reviews__video" alt="review">
-            </div>
-            <div class="reviews__item">
-                <img src="img/review-5.jpg" class="reviews__video" alt="review">
-            </div>
+            <!-- If we need navigation buttons -->
+            <!-- <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div> -->
+        
         </div>
     </section>
     <section class="format" id="format">
@@ -687,6 +712,7 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

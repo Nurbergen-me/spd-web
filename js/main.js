@@ -70,16 +70,97 @@ hiddenLinks.forEach(link => {
 // Burger toggle
 
 var navbar = document.querySelector('.navbar')
+var toTop = document.querySelector('.to-top')
 window.addEventListener('scroll', function(e) {
     lastPosition = window.scrollY;
     
     if (lastPosition > 10) {
         navbar.classList.add('active')
+        toTop.classList.remove('d-none')
     } else {
         navbar.classList.remove('active')
+        toTop.classList.add('d-none')
     }
 });
 
+
+// Swiper slider
+var swiperItem = document.querySelector(".swiper");
+if (swiperItem) {
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        slidesPerView: 3,
+        spaceBetween: 30,
+        centeredSlides: true,
+        slideActiveClass: 'active',
+        slideToClickedSlide: true,
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+            }
+        },
+      
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      
+        // And if we need scrollbar
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+      });
+}
+
+
+// Video
+
+var playWrap = document.querySelectorAll(".reviews__play-btn");
+// var video = document.getElementById("video");
+
+playWrap.forEach(item => {
+
+    item.addEventListener("click", (e) => {
+        playWrap.forEach(item => {
+            item.classList.remove('d-none')
+        })
+        item.classList.add('d-none')
+        // const video = item.parentNode.querySelector('.reviews__video')
+        // console.log(video)
+        // if (video.paused == true) {
+        //     video.play();
+        //     playButton.classList.add("hidden");
+        // } else {
+        //     video.pause();
+        //     playButton.classList.remove("hidden");
+        // }
+    });
+})
+
+
+// Toggle Filters 
+
+var allFilter = document.querySelector(".cases__all-filter");
+var filters = document.querySelector(".cases__filters");
+
+if (allFilter) {
+    allFilter.addEventListener('click', (e) => {
+        console.log('hi')
+        filters.classList.toggle('hidden')
+    })
+    
+}
 
 
 // Double Range
@@ -164,10 +245,12 @@ const fromSlider = document.querySelector('#fromSlider');
 const toSlider = document.querySelector('#toSlider');
 const fromInput = document.querySelector('#fromInput');
 const toInput = document.querySelector('#toInput');
-fillSlider(fromSlider, toSlider, '#C6C6C6', '#946EFF', toSlider);
-setToggleAccessible(toSlider);
+if (toSlider) {
+    fillSlider(fromSlider, toSlider, '#C6C6C6', '#946EFF', toSlider);
+    setToggleAccessible(toSlider);
+    fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider, fromInput);
+    toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput);
+    fromInput.oninput = () => controlFromInput(fromSlider, fromInput, toInput, toSlider);
+    toInput.oninput = () => controlToInput(toSlider, fromInput, toInput, toSlider);
+}
 
-fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider, fromInput);
-toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput);
-fromInput.oninput = () => controlFromInput(fromSlider, fromInput, toInput, toSlider);
-toInput.oninput = () => controlToInput(toSlider, fromInput, toInput, toSlider);
