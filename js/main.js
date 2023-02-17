@@ -156,8 +156,7 @@ var filters = document.querySelector(".cases__filters");
 
 if (allFilter) {
     allFilter.addEventListener('click', (e) => {
-        console.log('hi')
-        filters.classList.toggle('hidden')
+        filters.classList.toggle('hide')
     })
     
 }
